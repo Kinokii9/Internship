@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Calculator</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            background: #baccf1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 800px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+
+        .input-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        input {
+            flex: 1;
+            padding: 18px;
+            font-size: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        select {
+            width: 90px;
+            font-size: 25px;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 28px;
+            border: none;
+            border-radius: 12px;
+            background: #4800ff;
+            color: rgb(151, 191, 185);
+            cursor: pointer;
+        }
+
+        .result-box {
+            margin-top: 30px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .result-text {
+            font-size: 20px;
+        }
+
+        .result {
+            font-size: 40px;
+            color: rgb(103, 171, 103);
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Mini Calculator</h1>
+        <div class="input-group">
+            <input type="number" id="num1">
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+
+            </select>
+            <input type="number" id="num2">
+        </div>
+
+        <button onclick="calculate()">
+            Calculate Amount
+        </button>
+        <div class="result-box">
+            <div class="result-text">
+                Result:
+            </div>
+            <div class="result" id="result">
+                Enter a number
+            </div>
+        </div>
+    </div>
+
+    <script>
+         <!-- function calculate() {
+            let num1 =
+                parseFloat(document.getElementById("num1").value);
+            let num2 =
+                parseFloat(document.getElementById("num2").value);
+            let operator =
+                document.getElementById("operator").value;
+            let answer;
+            if (operator == "+") {
+                answer = num1 + num2;
+            }
+            else if (operator == "-") {
+                answer = num1 - num2;
+            }
+            else if (operator == "*") {
+                answer = num1 * num2;
+            }
+            else if (operator == "/") {
+                answer  = num2!==0 ?  num1 / num2: "this number can't be divided by 0";
+            }
+            
+            
+
+            document.getElementById("result").innerHTML =
+                answer;
+        } -->
+        
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Utility Simulator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .container {
+            width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .top-text {
+            color: rgb(54, 0, 251);
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .navbar {
+            background: #336ac2;
+            color: white;
+            padding: 18px;
+            overflow: hidden;
+        }
+
+        .logo {
+            float: left;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .menu {
+            float: right;
+            margin-top: 5px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 18px;
+        }
+
+        .features {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .box {
+            width: 30%;
+            display: inline-block;
+            background: #edf3fa;
+            text-align: center;
+            padding: 35px 0;
+            margin-right: 18px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        .last-box {
+            margin-right: 0;
+        }
+
+        .content {
+            overflow: hidden;
+        }
+
+        .left {
+            width: 45%;
+            float: left;
+            background: rgb(173, 203, 199);
+            border: 1px solid #ddd;
+            padding: 25px;
+            border: radius 10px;
+        }
+
+        .left h2 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+        }
+
+        .right {
+            width: 42%;
+            float: right;
+            background: #f1f1f1;
+            height: 470px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .card {
+            width: 300px;
+            background: #2563eb;
+            color: white;
+            padding: 25px;
+            position: absolute;
+            top: 150px;
+            left: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .card p {
+            font-size: 22px;
+            line-height: 35px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        button {
+            background: #25eb2c;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            font-size: 16px;
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1746a2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Utility Simulator</h1>
+        <p class="top-text">
+            Change the inputs below to see how atomic classes combine to build UIs.
+        </p>
+
+        <div class="navbar">
+            <h1 class="logo">
+                MyLogo
+            </h1>
+
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="box">
+                Feature 1
+            </div>
+            <div class="box">
+                Feature 2
+            </div>
+            <div class="box last-box">
+                Feature 3
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="left">
+                <h2>Utility Controls</h2>
+                <label>Padding (Spacing)</label>
+                <select>
+                    <option>Medium (p-8)</option>
+                    <option>Small (p-4)</option>
+                    <option>Large (p-12)</option>
+                </select>
+
+                <label>Background Theme (Colors)</label>
+                <select>
+                    <option>Primary blue</option>
+                    <option>Green</option>
+                    <option>Red</option>
+                </select>
+
+                <label>Text Size (Typography)</label>
+                <select>
+                    <option>Large (text-xl)</option>
+                    <option>Medium (text-m)</option>
+                    <option>small (text-s)</option>
+                </select>
+
+                <label>Corner Radius (Borders)</label>
+                <select>
+                    <option>Square (rounded-none)</option>
+                </select>
+
+                <label>Shadow (Depth)</label>
+                <select>
+                    <option>Medium (shadow-md)</option>
+                </select>
+            </div>
+
+            <div class="right">
+                <div class="card">
+                    <h3>Alex Walker</h3>
+                    <p>
+                        Full-Stack Web Developer building awesome things with Tailwind CSS.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button>Submit</button>
+            <button>Hover Me Slowly!</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
