@@ -13,7 +13,7 @@
         }
 
         body {
-            background-color: #1a1a1a;
+            background-color: #fffafa;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,12 +38,13 @@
             text-align: right;
             padding: 10px;
             outline: none;
+            caret-color: #ff9500;
         }
 
         .buttons {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 13px;
+            gap: 12px;
         }
 
         button {
@@ -76,7 +77,7 @@
 
 <body>
     <div class="calculator">
-        <input type="text" id="display" value="0" disabled />
+        <input type="text" id="display" value="0"/>
 
         <div class="buttons">
             <button class="btn-grey" onclick="press('C')">C</button>
@@ -102,10 +103,13 @@
     </div>
 
     <script>
-        let currentInput = "";
+        let screen = document.getElementById("display");
 
         function press(val) {
-            let screen = document.getElementById("display");
+                let current = screen.value;
+                let lastChar = current.slice(-1);
+                let operators = ['+','-','*','/','%'];
+            
 
             if (val === "C") {
                 currentInput = "";
@@ -130,7 +134,7 @@
 
                 switch (result) {
                     case Infinity:
-                        screen.value = "Error";
+                        screen.value = "Undefined";
                         currentInput = "";
                         break;
                     case undefined:
@@ -143,10 +147,11 @@
                         break;
                 }
             } catch (err) {
-                screen.value = "Error";
+                screen.value = "Undefined";
                 currentInput = "";
             }
         }
+    
     </script>
 </body>
 
